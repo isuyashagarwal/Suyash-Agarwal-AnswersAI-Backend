@@ -1,0 +1,14 @@
+version: '1.0'
+
+services:
+  api:
+    build: .
+    ports:
+      - "3000:5001"
+    environment:
+      PORT: 5001
+      CONNECTION_STRING: mongodb+srv://planology_admin:7W7eQMZi01QgahnC@planology.whgex7w.mongodb.net/answersai?retryWrites=true&w=majority
+      OPENAI_API_KEY: "YOUR OPENAI API KEY"
+      ACCESS_TOKEN_EXPIRY: 15m
+      ACCESS_TOKEN_SECRET: 3ec8306d91c352e811f2718b597c87a3068264bf92dabda9498ae03fef566075ca75835783b1beaa198f7359af686026cc05c1c4b073a7886b5201df1adb52d9
+      REFRESH_TOKEN_SECRET: a67ea3ec744319c19343716fbf5f21a2d8e858b1d57b0d59fc1e6a13736830c72e5a9515f5c537e8ac040601557708223780c9f7b0353d3ac8c879716d47b568
