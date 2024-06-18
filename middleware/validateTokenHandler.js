@@ -20,6 +20,9 @@ const validateToken = asyncHandler(async (req, res, next) => {
       res.status(401);
       throw new Error("Not authorized, token failed");
     }
+  } else {
+    res.status(401);
+    throw new Error("Token not found in body.");
   }
 });
 
